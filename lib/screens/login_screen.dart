@@ -1,6 +1,7 @@
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flash_chat/components/rounded_button.dart';
 import 'package:flash_chat/constants.dart';
+import 'package:flash_chat/screens/ForgotPassword.dart';
 import 'package:flutter/material.dart';
 import 'package:modal_progress_hud_nsn/modal_progress_hud_nsn.dart';
 
@@ -126,6 +127,13 @@ class _LoginScreenState extends State<LoginScreen>
                   title: 'Login',
                 ),
               ),
+              SizedBox(height: 10,),
+
+              Center(child: TextButton(onPressed: (){
+                Navigator.pushNamed(context, ForgotPassword.id);
+              }, child: Text('Forgot Password')),
+              ),
+
             ],
           ),
         ),
